@@ -57,8 +57,6 @@ get "/responses/:response_id" do
 end
 
 post "/responses" do
-  
-  logger.info params
   respond_with :create, name: "create" do |wants|
     wants.html { save_html_response }
     wants.json { save_json_response }
